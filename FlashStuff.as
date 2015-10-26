@@ -13,6 +13,9 @@
 			Gary.addEventListener(MouseEvent.MOUSE_DOWN, DragMe);
 			Gary.addEventListener(MouseEvent.MOUSE_UP, StopDraggingMe);
 
+			
+			// This is Gary's initial position on the stage
+			
 			Gary.x = 500;
 			Gary.y = 300;
 
