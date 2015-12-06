@@ -28,7 +28,6 @@
 			mySoundChannel.addEventListener(Event.SOUND_COMPLETE, onPlaybackComplete);
 			stage.addEventListener(Event.ENTER_FRAME, checkCollisions);
 
-
 		}
 
 		function fireArrow(event: MouseEvent): void {
@@ -57,8 +56,6 @@
 				firePlaybackStatus = true;
 
 			}
-			//myWhoosh.play();
-
 		}
 
 		function dropWater(e: MouseEvent): void {
@@ -68,27 +65,18 @@
 
 		}
 
-
 		function checkCollisions(e: Event): void {
-
 
 			// First if statement
 			if (arrow1.hitTestObject(fire1)) {
 
 				fire1.gotoAndPlay(2);
 
-				trace(firePlaybackStatus);
-
 				if (firePlaybackStatus == false) {
 					mySoundChannel = myFireSound.play();
 					firePlaybackStatus = true;
 				}
-				
-					trace(firePlaybackStatus);
 
-			} else {
-
-				//mySoundChannel.stop();
 			}
 
 			// Second if statement
@@ -100,7 +88,6 @@
 				firePlaybackStatus = false;
 			}
 		}
-
 
 		function onPlaybackComplete(e: Event): void {
 
